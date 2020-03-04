@@ -15,11 +15,15 @@ function listNumbers(myArray) {
 	for (var i = 0; i < myArray.length; i++) {
 		if (myArray[i] % 3 === 0) {
 			newListArray.push(myArray[i]);
-		}
-
+		} 
 	}
 	console.log(newListArray);
+
+	if (newListArray == 0) {
+		console.log("Sorry, no 3-divisible numbers")
+	}
 }
 
-listNumbers([1,2,3,4,5,6,7,8,9,10]);
+// listNumbers([1,2,3,4,5,6,7,8,9,10]); 
+listNumbers([1,1,1,1,1,2,5,7,3]);
 
