@@ -1,5 +1,5 @@
 // 1. Write a function that takes three arguments - all numbers - adds them together, split the result in 3 and displays the result on the console.
-
+/*
 function addDivide(numOne, numTwo, numThree) {
 var equation = ((numOne + numTwo + numThree)/3);
 console.log(equation);
@@ -101,3 +101,85 @@ function numList() {
 }
 
 numList();
+
+*/
+
+// 7. Create a function that takes in a string of multiple words and returns the first word with “ish” added to the end. Example:
+// ishFunc(“Soup is my favorite.“) -> “Soupish”
+
+var wordList = [];
+
+function firstWordIsh (myString) {
+	wordList = myString.split(" ")
+	console.log(wordList[0] + "ish");
+}
+
+firstWordIsh("Soup is my favorite food.");
+
+
+// 8. Write a function that takes and array of numbers and adds the sum of them.
+
+var sumOfNumbers = 0;
+
+function addSum(myArray) {
+	for (var i = 0; i < myArray.length; i++) {
+		sumOfNumbers = sumOfNumbers + myArray[i];
+	}
+	console.log(sumOfNumbers);
+}
+
+addSum([1, 2, 5, 6, 50, 20, 1, 1, 9]);
+
+
+// 9. Write a function that takes a string argument and returns all the instances of vowels ex. -> “whatever” - returns “aee”
+
+var arrayOfVowels = [];
+
+function getVowels(myWord) {
+	for (var i = 0; i < myWord.length; i++) {
+		var currentLetter = myWord.charAt(i);
+		if (currentLetter === "a" || currentLetter === "e" || currentLetter === "i" || currentLetter === "o" || currentLetter === "u") {
+			arrayOfVowels.push(currentLetter);
+		}
+	}
+	console.log(arrayOfVowels);
+}
+
+getVowels("Hello World");
+
+
+// 10. Create an array. Using the .forEach() method on the array, print each element to  the console. If you are unsure on how to use .forEach(), Google it.
+
+var elementList = ["hello", 1, 2, 5, "hi", 99, 20];
+
+elementList.forEach(printElement);
+
+function printElement(item) {
+	console.log(item); 
+}
+
+// Oggi's example:
+// array.forEach(function(name) {
+// 	console.log(name);
+// }
+
+// 11. Create a function that takes an array. Check to see if it contains a 5 or 6. If it does, return true, otherwise return false. Example:
+
+var numberOfQualifyingNumbers = [];
+
+function checkForNumbers(myArray) {
+	for (var i = 0; i < myArray.length; i++) {
+		if (myArray[i] === 5 || myArray[i] === 6) {
+			numberOfQualifyingNumbers.push(i);
+		}
+	}
+	if (numberOfQualifyingNumbers.length > 0) {
+		console.log("true");
+	} else {
+		console.log("false");
+	}
+}
+
+checkForNumbers([1, 3, 7, 8, 9, 6, 5]);
+
+
