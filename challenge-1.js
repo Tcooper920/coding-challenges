@@ -182,4 +182,26 @@ function checkForNumbers(myArray) {
 
 checkForNumbers([1, 3, 7, 8, 9, 6, 5]);
 
+// I need to get rid of the "/static/" and have as a final result an array that contains
+// files only in this format => "image1.jpg"
+
+let newArray = [];
+
+let images = [
+"/static/image1.jpg", "/static/image2.jpg", "/static/image3.jpg", "/static/image4.jpg",
+"/static/image5.jpg", "/static/image6.jpg", "/static/image7.jpg", "/static/image8.jpg",
+"/static/image9.jpg", "/static/image10.jpg", "/static/image11.jpg", "/static/image12.jpg"
+]
+
+function removeStaticText () {
+    for (let i = 0; i < images.length; i++) {
+        var result = images[i].split("/static/");
+        result = result.pop("")
+        newArray.push(result);
+    }
+    console.log(newArray);
+}
+
+removeStaticText();
+
 
